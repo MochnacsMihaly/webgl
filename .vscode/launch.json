@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Index",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080/index.html",
+            "runtimeArgs": [ 
+                "--remote-debugging-port=9222",
+                "--incognito"
+            ],
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        }
+        ]
+}   
