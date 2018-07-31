@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<head>
+    <style>
+        body{
+            background-color: #fff;
+            margin: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+        #canvas{
+            background-color: #000;
+            display: block;
+            overflow: hidden;
+            text-align: center;
+        }
+ 
+    </style>
+</head>
+<body onload="play()">
+
+<script src="js/require.js" type="text/javascript"></script>
+<canvas id="canvas"></canvas>
+
+</body>
+
+<script>
+    function play() {
+       require(['build/Script'], function (Script) 
+       {
+           var game = new Script.Script("data.json");
+       });
+   }
+
+</script>
+
+</html>

@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Demo",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080/demo.html",
+            "runtimeArgs": [ 
+                "--remote-debugging-port=9222",
+                "--incognito"
+            ],
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        }
+        ]
+}   
