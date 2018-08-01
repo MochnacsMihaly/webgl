@@ -3,10 +3,10 @@
     "configurations": [
         
         {
-            "name": "Demo",
+            "name": "Index",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:8080/demo.html",
+            "url": "http://localhost:8080/index.html",
             "runtimeArgs": [ 
                 "--remote-debugging-port=9222",
                 "--incognito"
