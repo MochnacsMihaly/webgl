@@ -103,7 +103,7 @@ export class Script
 
     protected InitDemo(): void
     {
-        loadTextResource('./shaders/shader.vs.glsl', function (vsErr, vsText) 
+        this.loadTextResource('./shaders/shader.vs.glsl', function (vsErr, vsText) 
             {
                 if (vsErr)
                 {
@@ -112,7 +112,7 @@ export class Script
                 } 
                 else 
                 {
-                    loadTextResource('./shaders/shader.fs.glsl', function (fsErr, fsText)
+                    this.loadTextResource('./shaders/shader.fs.glsl', function (fsErr, fsText)
                         {
                             if (fsErr)
                             {
@@ -199,9 +199,12 @@ export class Script
         //
         // Create buffer
         //
+            
+        var img = new Image();
+        img.src = "image.jpg";
     
-        var imgWidth = document.getElementById('wizard').x / 2 / 1000;
-        var imgHeight = document.getElementById('wizard').y / 2 / 1000;
+        var imgWidth = img.x / 2 / 1000;
+        var imgHeight = img.y / 2 / 1000;
     
         var imgVertices = 
         [ 
@@ -246,9 +249,7 @@ export class Script
     
         gl.enableVertexAttribArray(positionAttribLocation);
         gl.enableVertexAttribArray(texCoordAttribLocation);
-    
-        var img = new Image();
-        img.src = "image.jpg";
+
         
         //
         // Create texture
@@ -263,7 +264,7 @@ export class Script
         gl.texImage2D(
             gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA,
             gl.UNSIGNED_BYTE,
-            document.getElementById('wizard')
+            img
         );
     
         gl.bindTexture(gl.TEXTURE_2D, null);
